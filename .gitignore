@@ -1,0 +1,7 @@
+.DS_Store
+
+# Dependencias de Node.js
+node_modules/
+
+# Archivos temporales
+*.log
