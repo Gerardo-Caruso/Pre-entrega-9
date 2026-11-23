@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+header h1 {
+  text-align: center;
+} 
+
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+  } 
+
+main {
+  flex: 1;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Contenedor del loader */
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px;
+  width: 100%;
+}
+
+/* Círculo animado */
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #9d9c9c;
+  border-top: 5px solid #1a8755;
+  border-radius: 50%;
+  animation: girar 1s linear infinite;
+}
+
+/* Animacion de la rotacion */
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#mensaje-promo {
+  font-size: 1.3rem;      
+  font-weight: bold;          
+  color: #2e7d32;             
+  background-color: #e8f5e9;   
+  padding: 16px;               
+  border-radius: 8px;          
+  text-align: center;          
+  margin: 20px 0;              
+  border: 1px solid #c8e6c9;
+}
+
+#productos {
+  display: flex;
+  flex-wrap: wrap; /* Permite que bajen a la siguiente fila cuando no entran */
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  flex: 1 1 250px; /* Base de 250px pero flexibles */
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Evita que la foto se estire o deforme */
+  border-radius: 4px;
+}
+
+.card-boton {
+  width: 100%;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background-color: #1a8755;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card-boton:hover {
+  background-color: #164711;
+  transform: translateY(-1px);
+}
+
+.card-boton:active {
+  transform: translateY(0);
+}
+
+.card-boton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.form-agregar-producto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+}
