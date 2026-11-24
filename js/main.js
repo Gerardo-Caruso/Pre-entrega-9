@@ -149,10 +149,8 @@ inputBusqueda.addEventListener("input", (event) => {
 
 
 
-// Disparamos la carga cuando el HTML esté listo
-document.addEventListener("DOMContentLoaded", () => {
-  iniciarProductos();
-  mostrarMensajePromo();
-});
+iniciarProductos();
+mostrarMensajePromo();
+
 
 
