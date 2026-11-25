@@ -76,6 +76,7 @@ main {
 #productos {
   display: flex;
   flex-wrap: wrap; /* Permite que bajen a la siguiente fila cuando no entran */
+  justify-content: center;
   gap: 20px;
   padding: 20px;
 }

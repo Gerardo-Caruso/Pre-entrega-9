@@ -71,13 +71,13 @@ function imprimirProductosEnHTML(listaProductos) {
       <h3>${nombre}</h3>
       <p>${descripcion}</p>
       <p class="precio">$${precio}</p>
-      <button class="card-boton" id="boton-agregar-${id}">Agregar al carrito</button>
+      <button class="card-boton" id="${producto.id}${producto.nombre}">Agregar al carrito</button>
     `;
 
     contenedorProductos.append(card);
 
     // Buscamos el botón usando el mismo ID que definimos arriba
-    const cardButton = document.getElementById(`boton-agregar-${id}`); //agregamos el evento para el boton de la tarjeta
+    const cardButton = document.getElementById(`${producto.id}${producto.nombre}`); //agregamos el evento para el boton de la tarjeta
     cardButton.addEventListener("click", () => {
       carrito.push(producto);
       localStorage.setItem("carrito", JSON.stringify(carrito)); //JSON.stringify() convierte objeto/array a texto para poder guardarlo en storage
